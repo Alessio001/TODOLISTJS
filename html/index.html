@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <header class="mt-5">
+        <h1 class="bg-warning text-white text-center">
+            Javascript DOM </h1>
+    </header>
+    <section class="mt-5" />
+    <a href="#" class="ex01" onclick="refresh('exercice01')">Exercice 01</a>
+    <a href="#" class="ex02" onclick="refresh('exercice02')">Exercice 02</a>
+    <a href="#" class="ex03" onclick="refresh('exercice03')">Exercice 03</a>
+    <a href="#" class="ex04" onclick="refresh('exercice04')">Exercice 04</a>
+    <a href="#" class="ex05" onclick="refresh('exercice05')">Exercice 05</a>
+    <a href="#" class="ex06" onclick="refresh('exercice06')">Exercice 06</a>
+    <a href="#" class="ex07" onclick="refresh('exercice07')">Exercice 07</a>
+
+    </section>
+    <section id="exercice01" class="container bg-secondary mt-5 exercices">
+        <div class="container div1">
+            <h2>lalalala</h2>
+            <p>liste de propriété et méthode à retrouver dans la documentation:</p>
+            <ul>
+                <li>innerText</li>
+                <li>innerHTML</li>
+                <li>querySelector()</li>
+                <li>querySelectoraAll()</li>
+                <li>style</li>
+                <li>classList</li>
+            </ul>
+            <div>
+                <p>Changer le contenu du h2 par "le titre modifié"</p>
+                <p>Changer la couleur du h2(la couleur que vous voulez)</p>
+                <p>Ajouter une class background bootstrap au h2
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="exercice02" class="hidden exercices">
+        <p>Mettre un écouteur d'événement sur les boutons nav et changer le panel en conséquence</p>
+    </section>
+    <section id="exercice03" class="hidden exercices">
+        <h1>Welcome <span>Inconnu</span></h1>
+        <p>
+            écrivez dans l'input ci-dessous le nom de la personne que vous voulez acceuillir lorsque vous cliquez sur
+            le bouton "go" le nom que vous avez ajouté dans l'input alors mis dans le span du h2 et l'input sera alors
+            vider de tout contenu. Attention, interdiction de toucher à l'html.
+        </p>
+        <input placeholder="votre nom">
+        <button class="ok">GO</button>
+    </section>
+    <section id="exercice04" class="exercices hidden bg-secondary">
+        <h3 class="mt-5 container">Déplacer les éléments</h3>
+        <div class="row ml-5">
+            <div class="col-5 bg-primary droite">
+                <div class="deux carre"></div>
+            </div>
+            <div class="col-5 bg-primary ml-5 gauche">
+                <div class="un carre d-none"></div>
+            </div>
+        </div>
+        <div> <button class="moveee">Change de place</button></div>
+        <div>Nombre de click :<span class="nbrclick"> 0</span>
+        </div>
+    </section>
+    <section id="exercice05" class="exercices hidden bg-secondary mt-5">
+        <h1>Générer des éléments du DOM</h1>
+        <p>Cliquez ci-dessous pour générer des images</p>
+        <button class="btnimg">Click to create</button>
+        <div id="x"></div>
+    </section>
+    <section id="exercice06" class="exercices hidden mt-5 bg-secondary">
+        <h1>Création de calculatrice</h1>
+        <h2>Niveau 1</h2>
+        <input type="text" id="input1">
+        <span>+</span>
+        <input type="text" id="input2">
+        <button class="btnresult">=</button>
+        <span id="result"></span>
+        <h2>Niveau 2</h2>
+        <div class="calcu bg-dark">
+            <span> </span>
+            <br>
+            <input type="text" class="putnbr">
+            <hr class="bg-light">
+            <div class="row caal">
+                <div class="col-1"></div>
+                <button class=" col-2 ope b">1</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope c ">2</button>
+                <div class="col-1 ope"></div>
+                <button class="col-2 ope d">3</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope bg-primary plus">+ </button>
+            </div>
+            <hr class="bg-light">
+            <div class="row caal">
+                <div class="col-1"></div>
+                <button class="col-2 ope e">4</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope f">5</button>
+                <div class="col-1 ope"></div>
+                <button class="col-2 ope g">6</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope bg-primary moins">- </button>
+            </div>
+            <hr class="bg-light">
+            <div class="row caal">
+                <div class="col-1"></div>
+                <button class="col-2 ope h">7</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope i ">8</button>
+                <div class="col-1 ope"></div>
+                <button class="col-2 ope j">9</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope bg-primary fois">* </button>
+            </div>
+            <hr class="bg-light">
+            <div class="row caal">
+                <div class="col-1"></div>
+                <button class="col-2 ope bg-danger delete">C</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope a">0</button>
+                <div class="col-1 ope"></div>
+                <button class="col-2 ope bg-success egal">=</button>
+                <div class="col-1"></div>
+                <button class="col-2 ope bg-primary diviser">/ </button>
+            </div>
+
+
+        </div>
+    </section>
+    <section id="exercice07" class="exercices mt-5 bg-secondary">
+        <!-- <div id="myDIV" class="head">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" class="clic" placeholder="Title...">
+            <button class="btnadd">Add</button>
+        </div>
+        <div class="head">
+            <span>TASKS</span>Filtres <button class="rounded m-2">ALL</button><button class="rounded m-2">TO DO</button><button
+                class="rounded m-2">DONE</button>
+        </div>
+
+        <div div="tache">
+
+        </div> -->
+        <!-- <div id="myDIV" class="head">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" class="clic" placeholder="Title...">
+            <button class="btnadd">Add</button>
+        </div>
+        <div class="head">
+            <span>TASKS</span>Filtres <button class="rounded m-2">ALL</button><button class="rounded m-2">TO DO</button><button
+                class="rounded m-2">DONE</button>
+        </div>
+
+        <div div="tache">
+
+        </div> -->
+        <h1 class="text-center">TO DO LIST</h1>
+
+        <div class="text-center mt-5"><input class="w-50 text-center putwords" type="text" placeholder="Write something">
+            <button class="addtasks">
+                Add Tasks</button>
+        </div>
+        <div class="text-center mt-3">
+            <span>TASKS </span>filtres<button>ALL</button><button>TO DO</button><button>DONE</button>
+        </div>
+        <div class="tasks">
+
+        </div>
+    </section>
+    <script src="../js/ex07.js">
+    </script>
+
+</body>
+
+</html>
